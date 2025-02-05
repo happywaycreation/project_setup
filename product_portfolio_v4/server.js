@@ -519,7 +519,7 @@ app.get('/featured-products', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'http://localhost/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'project_setup/admin-template/docs/product-uploads/';
 
         // Format the results to include the full path for the images
         const products = results.map(product => {
@@ -536,7 +536,7 @@ app.get('/featured-products', (req, res) => {
     });
 });
 
-const basePath = 'http://localhost/project_setup/admin-template/docs/product-uploads/';
+const basePath = 'project_setup/admin-template/docs/product-uploads/';
 
 app.post('/getUserOrders', (req, res) => {
   const { email } = req.body;
