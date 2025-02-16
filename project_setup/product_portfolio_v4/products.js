@@ -45,7 +45,7 @@ const queryParamsLength = Array.from(queryParams.keys()).length;
 
             async function fetchCategories() {
                 try {
-                    const response = await fetch('http://localhost:3000/categories'); // Replace with your API endpoint
+                    const response = await fetch('http://147.93.106.209:3000/categories'); // Replace with your API endpoint
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
@@ -70,7 +70,7 @@ const queryParamsLength = Array.from(queryParams.keys()).length;
             }
             async function fetchColors(cateName) {
                 try {
-                    const response = await fetch('http://localhost:3000/colors', {
+                    const response = await fetch('http://147.93.106.209:3000/colors', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -359,7 +359,7 @@ const go = document.querySelector(".go");
 
             async function fetchCategories() {
                 try {
-                    const response = await fetch('http://localhost:3000/categories'); // Replace with your API endpoint
+                    const response = await fetch('http://147.93.106.209:3000/categories'); // Replace with your API endpoint
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
@@ -384,7 +384,7 @@ const go = document.querySelector(".go");
             }
             async function fetchColors(cateName) {
                 try {
-                    const response = await fetch('http://localhost:3000/colors', {
+                    const response = await fetch('http://147.93.106.209:3000/colors', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -654,7 +654,7 @@ const go = document.querySelector(".go");
             
             async function fetchCategories() {
                 try {
-                    const response = await fetch('http://localhost:3000/categories'); // Replace with your API endpoint
+                    const response = await fetch('http://147.93.106.209:3000/categories'); // Replace with your API endpoint
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
@@ -678,7 +678,7 @@ const go = document.querySelector(".go");
             }
             async function fetchColors(cateName) {
                 try {
-                    const response = await fetch('http://localhost:3000/colors', {
+                    const response = await fetch('http://147.93.106.209:3000/colors', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

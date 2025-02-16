@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // Perform any necessary logout logic here, like clearing session or localStorage
-        await fetch('http://localhost:3000/logout', {
+        await fetch('http://147.93.106.209:3000/logout', {
             method: 'POST',
             credentials: 'include', // Ensure cookies are sent
         });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastName = document.getElementById('LastName').value;
         const phoneNo = document.getElementById('Phone_no').value;
 
-        const response = await fetch('http://localhost:3000/signup', {
+        const response = await fetch('http://147.93.106.209:3000/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

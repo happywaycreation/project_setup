@@ -65,7 +65,7 @@ fetchWishProducts();
         let userEmail = sessionStorage.getItem('userEmail');
         
         // Make API call to insert coupon code into database
-        const response = await fetch('http://localhost:3000/insert-coupon', {
+        const response = await fetch('http://147.93.106.209:3000/insert-coupon', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -171,7 +171,7 @@ fetchWishProducts();
   
     try {
       // Fetch all coupons
-      const couponsResponse = await fetch('http://localhost:3000/get-coupons', {
+      const couponsResponse = await fetch('http://147.93.106.209:3000/get-coupons', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -181,7 +181,7 @@ fetchWishProducts();
       const coupons = couponsData.coupons;
   
       // Fetch applied coupons for the user
-      const appliedCouponsResponse = await fetch('http://localhost:3000/get-applied-coupons-temp', {
+      const appliedCouponsResponse = await fetch('http://147.93.106.209:3000/get-applied-coupons-temp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -261,7 +261,7 @@ if (isLoggedIn()) {
         let productIds = cartProducts.map(product => product.product_id);
 
         // Fetch product details for all products in cart
-        const productResponse = await fetch('http://localhost:3000/get-cart-buy', {
+        const productResponse = await fetch('http://147.93.106.209:3000/get-cart-buy', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -296,7 +296,7 @@ if (isLoggedIn()) {
         });
 
         let userEmail = sessionStorage.getItem('userEmail');
-        const appliedCouponsResponse = await fetch('http://localhost:3000/get-applied-coupons-discount', {
+        const appliedCouponsResponse = await fetch('http://147.93.106.209:3000/get-applied-coupons-discount', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -317,7 +317,7 @@ if (isLoggedIn()) {
         console.log("Total Amount in Paise:", amountInPaise);
 
         // Create order
-        const orderResponse = await fetch('http://localhost:3000/createOrder', {
+        const orderResponse = await fetch('http://147.93.106.209:3000/createOrder', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

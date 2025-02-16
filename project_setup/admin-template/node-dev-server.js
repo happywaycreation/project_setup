@@ -44,4 +44,4 @@ http.createServer(function(request, response) {
 	});
 }).listen(parseInt(port, 10));
 
-console.log("Server is running on http://localhost:" + port );
+console.log("Server is running on http://147.93.106.209:" + port );
