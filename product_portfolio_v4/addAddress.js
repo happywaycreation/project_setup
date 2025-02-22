@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           
     
             try {
-                const response = await fetch("http://147.93.106.209:3000/add-address", {
+                const response = await fetch("https://147.93.106.209:3000/add-address", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
