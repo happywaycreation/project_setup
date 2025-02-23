@@ -1,6 +1,6 @@
 export const removeAddress = async (aid) => {
     try {
-        const response = await fetch('http://147.93.106.209:3000/remove-address', {
+        const response = await fetch('https://52.66.203.20:3000/remove-address', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

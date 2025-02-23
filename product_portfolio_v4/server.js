@@ -41,7 +41,7 @@ app.use(session({
 
 // Database Connection
 const db = mysql.createConnection({
-    host: '147.93.106.209',
+    host: '52.66.203.20',
     user: 'root',
     password: '',
     database: 'product_portfolio_db'
@@ -498,7 +498,7 @@ app.get('/featured-products', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
 
         // Format the results to include the full path for the images
         const products = results.map(product => {
@@ -515,7 +515,7 @@ app.get('/featured-products', (req, res) => {
     });
 });
 
-const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
 
 app.post('/getUserOrders', (req, res) => {
   const { email } = req.body;
@@ -617,7 +617,7 @@ app.get('/products/:id', (req, res) => {
       const product = results[0];
 
       // Base path for the product images
-      const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
 
@@ -657,7 +657,7 @@ app.get('/productsCate', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
 
         const products = results.map(product => {
             const images = JSON.parse(product.product_image);
@@ -744,7 +744,7 @@ app.get('/productsAll', (req, res) => {
       return res.status(404).json({ error: 'No products found' });
     }
 
-    const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+    const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
     const products = results.map(product => {
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
@@ -794,7 +794,7 @@ app.get('/productsAll', (req, res) => {
         return res.status(404).json({ error: 'No products found' });
       }
 
-      const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
       const products = results.map(product => {
         const images = JSON.parse(product.product_image);
         const fullImageUrls = images.map(image => basePath + image);
@@ -889,7 +889,7 @@ app.post('/productsByColor', (req, res) => {
       }
 
       // Base path for the product images
-      const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
 
       const products = results.map(product => {
           const images = JSON.parse(product.product_image);
@@ -989,7 +989,7 @@ app.post('/get-product-details', (req, res) => {
             return res.status(500).json({ error: 'Database error' });
         }
 
-        const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
         const products = productRows.map(product => {
             const images = JSON.parse(product.product_image);
             const fullImageUrls = images.map(image => basePath + image);
@@ -1896,7 +1896,7 @@ app.post('/checkProductReview', async (req, res) => {
 
 app.get('/getProductReview/:productId', (req, res) => {
   const { productId } = req.params;
-  const basePath = 'http://147.93.106.209/project_setup/admin-template/docs/review_images/';
+  const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/review_images/';
 
   const query = `
       SELECT pr.*, ur.first_name, ur.last_name 
@@ -2022,5 +2022,5 @@ app.get('/',  (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running on http://147.93.106.209:${port}`);
+    console.log(`Server running on https://52.66.203.20:${port}`);
 });

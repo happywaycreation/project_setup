@@ -2,7 +2,7 @@ export const handleBuyNow = async (userEmail, productId, productQty, amount) => 
     console.log(userEmail + " : " + productId + " : " + productQty + " : " + amount);
   
     try {
-      const response = await fetch('http://147.93.106.209:3000/handle-buy-now', {
+      const response = await fetch('https://52.66.203.20:3000/handle-buy-now', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

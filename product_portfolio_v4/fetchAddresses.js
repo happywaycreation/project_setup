@@ -3,7 +3,7 @@ import { removeAddress } from "./removeAddress";
 
 async function fetchAddresses(userEmail) {
     try {
-        const response = await fetch('http://147.93.106.209:3000/get-address', {
+        const response = await fetch('https://52.66.203.20:3000/get-address', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function populateAddressTemplate(address) {
                 const addressId = address.aid;
                 const userEmail = sessionStorage.getItem('userEmail');
         
-                fetch('http://147.93.106.209:3000/set-default-address', {
+                fetch('https://52.66.203.20:3000/set-default-address', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

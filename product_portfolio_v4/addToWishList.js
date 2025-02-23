@@ -17,7 +17,7 @@ export const addToWishList = async (evt, id, stock, userEmail) => {
     evt.target.replaceWith(newElement);
 
     try {
-        const response = await fetch('https://147.93.106.209:3000/add-to-wishlist', {
+        const response = await fetch('https://52.66.203.20:3000/add-to-wishlist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

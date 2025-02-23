@@ -5,7 +5,7 @@ export const getCartProductFromLS = async () => {
     }
 
     try {
-        const response = await fetch('http://147.93.106.209:3000/get-cart-products', {
+        const response = await fetch('https://52.66.203.20:3000/get-cart-products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchProductById = async (productId) => {
     try {
-        const response = await fetch(`http://147.93.106.209:3000/products/${productId}`);
+        const response = await fetch(`https://52.66.203.20:3000/products/${productId}`);
         if (!response.ok) throw new Error('Network response was not ok');
         return await response.json();
     } catch (error) {
@@ -119,7 +119,7 @@ document.getElementById('reviewForm').addEventListener('submit', async (evt) => 
     });
 
     try {
-        const response = await fetch('http://147.93.106.209:3000/uploadReview', {
+        const response = await fetch('https://52.66.203.20:3000/uploadReview', {
             method: 'POST',
             body: formData,
         });

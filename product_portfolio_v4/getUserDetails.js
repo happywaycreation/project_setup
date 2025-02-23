@@ -1,7 +1,7 @@
 // Function to fetch user details
 export async function getUserDetails(userEmail) {
     try {
-      const response = await fetch('http://147.93.106.209:3000/getUserDetails', {
+      const response = await fetch('https://52.66.203.20:3000/getUserDetails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 userEmail: userEmail, // Replace with the actual user email
             };
     
-          
+            
     
             try {
-                const response = await fetch("https://147.93.106.209:3000/add-address", {
+                const response = await fetch("https://52.66.203.20:3000/add-address", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

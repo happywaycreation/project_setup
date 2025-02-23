@@ -3,7 +3,7 @@ const userEmail = sessionStorage.getItem('userEmail');
 
     async function loadProfile(email) {
         try {
-            const response = await fetch(`http://147.93.106.209:3000/user-details?email=${encodeURIComponent(email)}`);
+            const response = await fetch(`https://52.66.203.20:3000/user-details?email=${encodeURIComponent(email)}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
@@ -35,7 +35,7 @@ const userEmail = sessionStorage.getItem('userEmail');
         };
 
         try {
-            const response = await fetch('http://147.93.106.209:3000/update-user-details', {
+            const response = await fetch('https://52.66.203.20:3000/update-user-details', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
