@@ -24,7 +24,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
    
 
     // Send data to the server
-    fetch('https://52.66.203.20:3000/submit-feedback', {
+    fetch('https://happywaycreations.52.66.203.206.nip.io:3000/submit-feedback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

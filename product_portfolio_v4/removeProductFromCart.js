@@ -10,7 +10,7 @@ import { updateCartValue } from "./updateCartValue";
 
 export const removeProductFromCart = async (id, userEmail) => {
     try {
-        const response = await fetch('https://52.66.203.20:3000/remove-from-cart', {
+        const response = await fetch('https://happywaycreations.52.66.203.206.nip.io:3000/remove-from-cart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

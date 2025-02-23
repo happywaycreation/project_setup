@@ -1,6 +1,6 @@
 export const getProductDetailsFromServer = async (productIds) => {
     try {
-        const response = await fetch('https://52.66.203.20:3000/get-product-details', {
+        const response = await fetch('https://happywaycreations.52.66.203.206.nip.io:3000/get-product-details', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

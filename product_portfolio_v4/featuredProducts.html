@@ -67,7 +67,7 @@
       const loadFeaturedProducts = async () => {
         let carousel = document.querySelector('.swiper-wrapper');
         try {
-          const response = await fetch('https://52.66.203.20:3000/featured-products');
+          const response = await fetch('https://happywaycreations.52.66.203.206.nip.io:3000/featured-products');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
