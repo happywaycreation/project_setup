@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
+import {fileURLToPath} from 'url';
 import Razorpay from 'razorpay';
 import cors from 'cors';
 import mysql from 'mysql';
@@ -13,7 +15,8 @@ import nodemailer from 'nodemailer';
 
 const app = express();
 const port = 3000;
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // Replace these with your Razorpay key and secret
 const razorpay = new Razorpay({
     key_id: 'rzp_test_s2VG2G2HwcOQd6',
@@ -24,6 +27,8 @@ const razorpay = new Razorpay({
 app.use(cors()); // Enable CORS
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use('/product-uploads', express.static(path.join(__dirname,'../admin-template/docs/product-uploads')));
+app.use('/review-images', express.static(path.join(__dirname,'../admin-template/docs/review-images')));
 app.use(express.static('public'));
 
 // Generate a random session secret key
@@ -498,7 +503,7 @@ app.get('/featured-products', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20:3000/product-uploads/';
 
         // Format the results to include the full path for the images
         const products = results.map(product => {
@@ -515,7 +520,7 @@ app.get('/featured-products', (req, res) => {
     });
 });
 
-const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+const basePath = 'https://52.66.203.20:3000/product-uploads/';
 
 app.post('/getUserOrders', (req, res) => {
   const { email } = req.body;
@@ -617,7 +622,7 @@ app.get('/products/:id', (req, res) => {
       const product = results[0];
 
       // Base path for the product images
-      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20:3000/product-uploads/';
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
 
@@ -657,7 +662,7 @@ app.get('/productsCate', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20:3000/product-uploads/';
 
         const products = results.map(product => {
             const images = JSON.parse(product.product_image);
@@ -744,7 +749,7 @@ app.get('/productsAll', (req, res) => {
       return res.status(404).json({ error: 'No products found' });
     }
 
-    const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+    const basePath = 'https://52.66.203.20:3000/product-uploads/';
     const products = results.map(product => {
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
@@ -794,7 +799,7 @@ app.get('/productsAll', (req, res) => {
         return res.status(404).json({ error: 'No products found' });
       }
 
-      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20:3000/product-uploads/';
       const products = results.map(product => {
         const images = JSON.parse(product.product_image);
         const fullImageUrls = images.map(image => basePath + image);
@@ -889,7 +894,7 @@ app.post('/productsByColor', (req, res) => {
       }
 
       // Base path for the product images
-      const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+      const basePath = 'https://52.66.203.20:3000/product-uploads/';
 
       const products = results.map(product => {
           const images = JSON.parse(product.product_image);
@@ -989,7 +994,7 @@ app.post('/get-product-details', (req, res) => {
             return res.status(500).json({ error: 'Database error' });
         }
 
-        const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/product-uploads/';
+        const basePath = 'https://52.66.203.20:3000/product-uploads/';
         const products = productRows.map(product => {
             const images = JSON.parse(product.product_image);
             const fullImageUrls = images.map(image => basePath + image);
@@ -1896,7 +1901,7 @@ app.post('/checkProductReview', async (req, res) => {
 
 app.get('/getProductReview/:productId', (req, res) => {
   const { productId } = req.params;
-  const basePath = 'https://52.66.203.20/project_setup/admin-template/docs/review_images/';
+  const basePath = 'https://52.66.203.20:3000/review_images/';
 
   const query = `
       SELECT pr.*, ur.first_name, ur.last_name 
