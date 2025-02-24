@@ -17,7 +17,7 @@ export const incrementDecrementWishlist = async (event, id, stock, price) => {
   }
 
   try {
-    const response = await fetch('https://happywaycreations.52.66.203.206.nip.io:3000/update-wishlist-quantity', {
+    const response = await fetch('http://52.66.203.206:3000/update-wishlist-quantity', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

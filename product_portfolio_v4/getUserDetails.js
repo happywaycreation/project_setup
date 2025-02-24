@@ -1,7 +1,7 @@
 // Function to fetch user details
 export async function getUserDetails(userEmail) {
     try {
-      const response = await fetch('https://happywaycreations.52.66.203.206.nip.io:3000/getUserDetails', {
+      const response = await fetch('http://52.66.203.206:3000/getUserDetails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
