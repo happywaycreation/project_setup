@@ -12,7 +12,7 @@ export async function subscribe(event) {
     }
 
     try {
-        const response = await fetch('http://52.66.203.206:3000/subscribe', {
+        const response = await fetch('http://13.126.114.64:3000/subscribe', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

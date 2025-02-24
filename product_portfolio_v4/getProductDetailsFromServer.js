@@ -1,6 +1,6 @@
 export const getProductDetailsFromServer = async (productIds) => {
     try {
-        const response = await fetch('http://52.66.203.206:3000/get-product-details', {
+        const response = await fetch('http://13.126.114.64:3000/get-product-details', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

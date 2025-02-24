@@ -9,7 +9,7 @@ import { updateWishValue } from "./updateWishListValue";
 
 export const removeProductFromWish = async (id, userEmail) => {
     try {
-        const response = await fetch('http://52.66.203.206:3000/remove-from-wishlist', {
+        const response = await fetch('http://13.126.114.64:3000/remove-from-wishlist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

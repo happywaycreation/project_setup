@@ -503,7 +503,7 @@ app.get('/featured-products', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'http://52.66.203.20:3000/product-uploads/';
+        const basePath = 'http://13.126.114.64:3000/product-uploads/';
 
         // Format the results to include the full path for the images
         const products = results.map(product => {
@@ -520,7 +520,7 @@ app.get('/featured-products', (req, res) => {
     });
 });
 
-const basePath = 'http://52.66.203.20:3000/product-uploads/';
+const basePath = 'http://13.126.114.64:3000/product-uploads/';
 
 app.post('/getUserOrders', (req, res) => {
   const { email } = req.body;
@@ -622,7 +622,7 @@ app.get('/products/:id', (req, res) => {
       const product = results[0];
 
       // Base path for the product images
-      const basePath = 'http://52.66.203.20:3000/product-uploads/';
+      const basePath = 'http://13.126.114.64:3000/product-uploads/';
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
 
@@ -662,7 +662,7 @@ app.get('/productsCate', (req, res) => {
         }
 
         // Base path for the product images
-        const basePath = 'http://52.66.203.20:3000/product-uploads/';
+        const basePath = 'http://13.126.114.64:3000/product-uploads/';
 
         const products = results.map(product => {
             const images = JSON.parse(product.product_image);
@@ -749,7 +749,7 @@ app.get('/productsAll', (req, res) => {
       return res.status(404).json({ error: 'No products found' });
     }
 
-    const basePath = 'http://52.66.203.20:3000/product-uploads/';
+    const basePath = 'http://13.126.114.64:3000/product-uploads/';
     const products = results.map(product => {
       const images = JSON.parse(product.product_image);
       const fullImageUrls = images.map(image => basePath + image);
@@ -799,7 +799,7 @@ app.get('/productsAll', (req, res) => {
         return res.status(404).json({ error: 'No products found' });
       }
 
-      const basePath = 'http://52.66.203.20:3000/product-uploads/';
+      const basePath = 'http://13.126.114.64:3000/product-uploads/';
       const products = results.map(product => {
         const images = JSON.parse(product.product_image);
         const fullImageUrls = images.map(image => basePath + image);
@@ -894,7 +894,7 @@ app.post('/productsByColor', (req, res) => {
       }
 
       // Base path for the product images
-      const basePath = 'http://52.66.203.20:3000/product-uploads/';
+      const basePath = 'http://13.126.114.64:3000/product-uploads/';
 
       const products = results.map(product => {
           const images = JSON.parse(product.product_image);
@@ -994,7 +994,7 @@ app.post('/get-product-details', (req, res) => {
             return res.status(500).json({ error: 'Database error' });
         }
 
-        const basePath = 'http://52.66.203.20:3000/product-uploads/';
+        const basePath = 'http://13.126.114.64:3000/product-uploads/';
         const products = productRows.map(product => {
             const images = JSON.parse(product.product_image);
             const fullImageUrls = images.map(image => basePath + image);
@@ -1901,7 +1901,7 @@ app.post('/checkProductReview', async (req, res) => {
 
 app.get('/getProductReview/:productId', (req, res) => {
   const { productId } = req.params;
-  const basePath = 'http://52.66.203.20:3000/review_images/';
+  const basePath = 'http://13.126.114.64:3000/review_images/';
 
   const query = `
       SELECT pr.*, ur.first_name, ur.last_name 

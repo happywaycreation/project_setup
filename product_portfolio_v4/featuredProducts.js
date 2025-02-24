@@ -2,7 +2,7 @@ let carousel = document.querySelector('.swiper-wrapper');
 
 const loadFeaturedProducts = async () => {
     try {
-        const response = await fetch('http://52.66.203.206:3000/featured-products');
+        const response = await fetch('http://13.126.114.64:3000/featured-products');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

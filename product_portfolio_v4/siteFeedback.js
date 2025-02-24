@@ -24,7 +24,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
    
 
     // Send data to the server
-    fetch('http://52.66.203.206:3000/submit-feedback', {
+    fetch('http://13.126.114.64:3000/submit-feedback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ import { updateCartValue } from "./updateCartValue";
 
 export const removeProductFromCart = async (id, userEmail) => {
     try {
-        const response = await fetch('http://52.66.203.206:3000/remove-from-cart', {
+        const response = await fetch('http://13.126.114.64:3000/remove-from-cart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

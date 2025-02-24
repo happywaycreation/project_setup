@@ -1,6 +1,6 @@
 export const deduceSingleProdQtyFromDB = async (id, qty) => {
     try {
-      const response = await fetch('http://52.66.203.206:3000/update-single-product-quantity', {
+      const response = await fetch('http://13.126.114.64:3000/update-single-product-quantity', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

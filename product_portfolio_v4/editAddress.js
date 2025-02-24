@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         
             try {
-                const response = await fetch(`http://52.66.203.206:3000/fetch-address?aid=${aid}`);
+                const response = await fetch(`http://13.126.114.64:3000/fetch-address?aid=${aid}`);
                 
                 if (!response.ok) {
                     throw new Error("Failed to fetch address information.");
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 console.log('addressData:', addressData);
         
                 try {
-                    const response = await fetch(`http://52.66.203.206:3000/update-address`, {
+                    const response = await fetch(`http://13.126.114.64:3000/update-address`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

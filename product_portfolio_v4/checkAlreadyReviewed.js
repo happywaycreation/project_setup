@@ -9,7 +9,7 @@ export const isAlreadyReviewed = async (orderId, productId) => {
 
     try {
         // Check if the record exists in product_review table
-        const response = await fetch('http://52.66.203.206:3000/checkProductReview', {
+        const response = await fetch('http://13.126.114.64:3000/checkProductReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

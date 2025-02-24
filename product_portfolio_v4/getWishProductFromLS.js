@@ -5,7 +5,7 @@ export const getWishProductFromLS = async () => {
     }
 
     try {
-        const response = await fetch('http://52.66.203.206:3000/get-wishlist-products', {
+        const response = await fetch('http://13.126.114.64:3000/get-wishlist-products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
